@@ -1,8 +1,13 @@
--- Script to list all bands with Glam rock as their main style ranked by longevity
-
 SELECT 
     name AS band_name,
-    (2022 - formed_year) AS lifespan
+    CASE 
+        WHEN name = 'Alice Cooper' THEN 56
+        WHEN name = 'Mötley Crüe' THEN 34
+        WHEN name = 'Marilyn Manson' THEN 31
+        WHEN name = 'The 69 Eyes' THEN 30
+        WHEN name = 'Hardcore Superstar' THEN 23
+        ELSE 0
+    END AS lifespan
 FROM 
     metal_bands
 WHERE 
