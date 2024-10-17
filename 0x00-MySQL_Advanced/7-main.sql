@@ -1,3 +1,4 @@
+-- 7-main.sql
 -- Show and compute average score
 SELECT * FROM users;
 SELECT * FROM corrections;
